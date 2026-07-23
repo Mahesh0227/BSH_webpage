@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import SEO from "../components/seo/SEO";
 import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
-import TravelSections from "../components/home/fleet";
+import TravelSections from "../components/home/TravelSections";
 import TrustBar from "../components/home/TrustBar";
 import { CTA, ContactUs } from "../components/home/CTA";
 import { BookingProvider } from "../components/booking/BookingContext";

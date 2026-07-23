@@ -22,7 +22,7 @@ import { destinations, type Destination } from "../data/destinationsData";
 // coast, sandalwood-rust for the temple, and instrument-panel blue for transit.
 
 const CATEGORY_THEME: Record<
-  Destination["category"],
+  NonNullable<Destination["category"]>,
   {
     accent: string;
     accentSoft: string;
@@ -87,18 +87,16 @@ export default function DestinationDetail() {
 
   if (!destination) return <Navigate to="/destinations" replace />;
 
-  const {
+    const {
     name,
     image,
     distanceFromVizag,
-    distanceKm,
     driveTime,
     description,
     tagline,
     costPerDay,
     importantNotes,
     places,
-    category,
     history,
     highlights,
     quickFacts,
@@ -108,7 +106,10 @@ export default function DestinationDetail() {
     sources,
   } = destination;
 
-const theme = CATEGORY_THEME[category ?? "Hill Station"];
+  const distanceKm = destination.distanceKm ?? 0;
+  const category = destination.category ?? "Hill Station";
+
+  const theme = CATEGORY_THEME[category];
   const CategoryIcon = theme.Icon;
   // Fill level of the route marker's odometer bar: closer destinations read
   // "fuller" on a 0–130km scale, since nothing we serve sits further than that.
