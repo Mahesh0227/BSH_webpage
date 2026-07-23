@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/seo/SEO";
-import Hero from "../components/home/Hero";
-import Features from "../components/home/Features";
-import TravelSections from "../components/home/TravelSections";
-import TrustBar from "../components/home/TrustBar";
-import { CTA, ContactUs } from "../components/home/CTA";
+import Hero from "../components/Home/Hero";
+import Features from "../components/Home/Features";
+import TravelSections from "../components/Home/TravelSections";
+import TrustBar from "../components/Home/TrustBar";
+import { CTA, ContactUs } from "../components/Home/CTA";
 import { BookingProvider } from "../components/booking/BookingContext";
-import Review from "../components/home/review";
+import Review from "../components/Home/review";
 import BookingWizard from "../components/booking/BookingWizard";
 const localBusinessSchema = {
   "@context": "https://schema.org",

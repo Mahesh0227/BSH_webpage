@@ -15,14 +15,20 @@ import {
   Plane,
   CalendarCheck,
 } from "lucide-react";
-import { destinations, type Destination } from "../data/destinationsData";
+import { destinations } from "../data/destinationsData";
 
 // Every category gets its own accent, drawn from the thing it's actually
 // known for — moss for the hills, wet stone for the caves, sea-teal for the
 // coast, sandalwood-rust for the temple, and instrument-panel blue for transit.
-
+type Category =
+  | "Hill Station"
+  | "Nature & Caves"
+  | "Beach"
+  | "Temple"
+  | "Transit"
+  | "Heritage & Buddhist Site";
 const CATEGORY_THEME: Record<
-  NonNullable<Destination["category"]>,
+    Category,
   {
     accent: string;
     accentSoft: string;
@@ -107,7 +113,9 @@ export default function DestinationDetail() {
   } = destination;
 
   const distanceKm = destination.distanceKm ?? 0;
-  const category = destination.category ?? "Hill Station";
+  const category: keyof typeof CATEGORY_THEME =
+  (destination.category as keyof typeof CATEGORY_THEME) ??
+  "Hill Station";
 
   const theme = CATEGORY_THEME[category];
   const CategoryIcon = theme.Icon;

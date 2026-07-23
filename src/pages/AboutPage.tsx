@@ -1,12 +1,12 @@
 
-import AboutHero from "../components/about/AboutHero";
-import WhoWeAre from "../components/about/WhoWeAre";
-import MissionVisionValues from "../components/about/MissionVisionValues";
-import AboutStatsBar from "../components/about/AboutStatsBar";
-import WeServeYouBetter from "../components/about/WeServeYouBetter";
+import AboutHero from "../components/About/AboutHero";
+import WhoWeAre from "../components/About/WhoWeAre";
+import MissionVisionValues from "../components/About/MissionVisionValues";
+import AboutStatsBar from "../components/About/AboutStatsBar";
+import WeServeYouBetter from "../components/About/WeServeYouBetter";
 // import Testimonials from "../components/about/Testimonials";
-import { CTA } from "../components/home/CTA";
-import Review from "../components/home/review";
+import { CTA } from "../components/Home/CTA";
+import Review from "../components/Home/review";
 
 export default function AboutPage() {
   return (
