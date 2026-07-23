@@ -21,7 +21,7 @@ export type Destination = {
   image: string;
 
   distanceFromVizag: string;
-  distanceKm?: number;
+  distanceKm: number;        // was optional — now required
   driveTime?: string;
   sources?: string[];
 
@@ -35,7 +35,7 @@ export type Destination = {
   importantNotes?: string[];
   places?: DestinationPlace[];
 
-  category?:
+  category:                  // was optional — now required
     | "Hill Station"
     | "Nature & Caves"
     | "Beach"
@@ -167,7 +167,10 @@ export const destinations: Destination[] = [
     seoTitle: "Vizag to Lambasingi Taxi | Kashmir of Andhra Pradesh | BSH Taxi Services",
     seoDescription:
       "Reliable taxi service from Visakhapatnam to Lambasingi, the Kashmir of Andhra Pradesh. Affordable weekend trip & sightseeing cab packages, booked online 24/7.",
-    keywords: [
+
+distanceKm: 100,
+driveTime: "3 hrs",
+      keywords: [
       "vizag to lambasingi taxi",
       "lambasingi cab service from vizag",
       "kashmir of andhra pradesh taxi booking",
@@ -212,7 +215,10 @@ export const destinations: Destination[] = [
     seoTitle: "Rushikonda Beach Taxi in Vizag | Local Cab Service | BSH Taxi Services",
     seoDescription:
       "Book a local taxi to Rushikonda Beach in Visakhapatnam. Quick, comfortable rides to Vizag's most popular Blue Flag beach, available 24/7 at affordable fares.",
-    keywords: [
+
+distanceKm: 12,
+driveTime: "25 mins",
+      keywords: [
       "vizag rushikonda beach taxi",
       "local taxi to rushikonda beach",
       "visakhapatnam beach cab service",
@@ -254,7 +260,10 @@ export const destinations: Destination[] = [
     seoTitle: "Simhachalam Temple Taxi Booking in Vizag | BSH Taxi Services",
     seoDescription:
       "Book a taxi to Simhachalam Temple from anywhere in Visakhapatnam. Comfortable local cabs for temple darshan visits, available all day at affordable rates.",
-    keywords: [
+
+distanceKm: 12,
+driveTime: "25 mins",
+      keywords: [
       "vizag to simhachalam temple taxi",
       "simhachalam temple cab booking",
       "visakhapatnam temple taxi service",
@@ -482,7 +491,10 @@ export const destinations: Destination[] = [
     seoTitle: "Vizag Airport Taxi Service | 24/7 Airport Transfers | BSH Taxi Services",
     seoDescription:
       "Book reliable airport taxi service in Visakhapatnam. Punctual pickup and drop to Vizag Airport (VTZ), available 24/7 with professional drivers, fixed fares.",
-    keywords: [
+
+distanceKm: 12,
+driveTime: "25 mins",
+      keywords: [
       "vizag airport taxi",
       "visakhapatnam airport transfer taxi",
       "airport taxi booking vizag",

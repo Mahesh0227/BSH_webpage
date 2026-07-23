@@ -20,6 +20,7 @@ import { destinations, type Destination } from "../data/destinationsData";
 // Every category gets its own accent, drawn from the thing it's actually
 // known for — moss for the hills, wet stone for the caves, sea-teal for the
 // coast, sandalwood-rust for the temple, and instrument-panel blue for transit.
+
 const CATEGORY_THEME: Record<
   Destination["category"],
   {
@@ -107,10 +108,11 @@ export default function DestinationDetail() {
     sources,
   } = destination;
 
-  const theme = CATEGORY_THEME[category];
+const theme = CATEGORY_THEME[category ?? "Hill Station"];
   const CategoryIcon = theme.Icon;
   // Fill level of the route marker's odometer bar: closer destinations read
   // "fuller" on a 0–130km scale, since nothing we serve sits further than that.
+
   const routeFill = Math.min(100, Math.round((distanceKm / 130) * 100));
 
   return (
